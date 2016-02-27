@@ -2,6 +2,7 @@ package ua.lviv.devs.spinnerinlistview;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -62,8 +63,9 @@ public class ListViewAdapter extends BaseAdapter{
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     if (position != 0) {
                         Toast.makeText(context, "You clicked on " + position + " position inside spinner:)", Toast.LENGTH_SHORT).show();
+                        holder.tv.setBackgroundColor(Color.parseColor("#bdbdbd"));
                     }
-//                holder.tv.setText(mArrayList.get(position));
+
             }
 
             @Override
